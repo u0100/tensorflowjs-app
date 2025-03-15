@@ -23,7 +23,6 @@ enum PopularPlan {
 interface PlanProps {
   title: string;
   popular: PopularPlan;
-  price: number;
   description: string;
   buttonText: string;
   benefitList: string[];
@@ -33,7 +32,6 @@ const plans: PlanProps[] = [
   {
     title: "ML-предсказания",
     popular: 0,
-    price: 0,
     description: "Введите слово, и нейросеть определит его настроение.",
     buttonText: "Предсказать",
     benefitList: ["TensorFlow.js"],
@@ -41,7 +39,6 @@ const plans: PlanProps[] = [
   {
     title: "Text",
     popular: 1,
-    price: 45,
     description: "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
     buttonText: "Начать",
     benefitList: ["Text"],
@@ -49,7 +46,6 @@ const plans: PlanProps[] = [
   {
     title: "Text",
     popular: 0,
-    price: 120,
     description: "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
     buttonText: "Начать",
     benefitList: ["Text"],
@@ -127,7 +123,7 @@ export const PricingSection = () => {
   return (
     <section className="container py-24 sm:py-32">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-lg text-primary tracking-wider">Pricing Plans</h2>
+        <h2 className="text-lg text-primary tracking-wider">ML TensorFlow.js project</h2>
         <Button asChild variant="secondary" className="w-5/6 md:w-1/4 font-bold">
           <Link href="https://github.com/u0100/tensorflowjs-app" target="_blank">
             Github проекта
@@ -136,7 +132,7 @@ export const PricingSection = () => {
       </div>
 
       <div className="flex flex-col gap-8">
-        {plans.map(({ title, popular, price, description, buttonText, benefitList }, index) => (
+        {plans.map(({ title, popular, description, buttonText, benefitList }, index) => (
           <Card key={title}>
             <CardHeader>
               <CardTitle className="pb-2 text-2xl">{title}</CardTitle>
