@@ -110,11 +110,13 @@ export const Navbar = () => {
             <TelegramIcon className="size-5" />
           </Link>
         </Button>
-        <Button asChild size="sm" variant="ghost" aria-label="View on Steam">
+        
+        {/*<Button asChild size="sm" variant="ghost" aria-label="View on Steam">
           <Link aria-label="View on Steam" href="https://steamcommunity.com/profiles/76561197992378564/" target="_blank">
             <SteamIcon className="size-5" />
           </Link>
-        </Button>
+        </Button>*/}
+
         <Button asChild size="sm" variant="ghost" aria-label="View on GitHub">
           <Link aria-label="View on GitHub" href="https://github.com/u0100" target="_blank">
             <Github className="size-5" />
